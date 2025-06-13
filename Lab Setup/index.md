@@ -55,3 +55,39 @@ title: Step 3 – BIOS/UEFI Configuration
      - Use UEFI if your USB was built for it
      - Use Legacy for MBR schemes
 4. Set the **USB Drive** as the first boot option.
+
+
+---
+title: Step 4 – Install Kali Linux
+---
+
+## Boot from USB
+
+1. Insert your bootable USB.
+2. Power on and select **Boot Menu** (e.g., `F12`, `ESC`, or `F9`).
+3. Select the USB.
+
+## Begin Install
+
+Choose from the menu:
+
+- Graphical Install
+
+### Graphical Install Steps:
+
+1. Select Language, Region, and Keyboard.
+2. Configure Network or skip.
+3. Set hostname (e.g., `kali-machine`)
+4. Create a user/password.
+5. Choose disk partitioning:
+   - Use entire disk (for full Kali install)
+   - Manual (for dual boot)
+6. Install the optional software and programs that come with the installation
+7. Install GRUB when prompted.
+
+## Final Reboot
+
+Remove the USB when installation finishes. Boot into Kali. 
+*You may need to go back into BIOS to choose the drive you installed Kali onto*
+
+[Next ➡️ Required Software](../Required Software/)
