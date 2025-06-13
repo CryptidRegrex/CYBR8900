@@ -34,7 +34,11 @@ In this tutorial, you’ll learn how to:
 
 - A computer running **Kali Linux**
 - A **wireless adapter that supports monitor mode and packet injection**
-- Tools already included in Kali:
+  - In this lab I leverage the **HAK5 MK7AC WiFi Adapter**
+- An access point that can use the WPA2-Personal protocol **AND** is using the 2.4GHz transmission frequency
+  - In this lab I leverage the **NETGEAR R6400-100NAS** *Circa 2017*
+*Note this lab hinges on these two commponents. I would recommend using an older router**
+- Tools that already should be included in Kali:
   - `airmon-ng`
   - `airodump-ng`
   - `aireplay-ng`
