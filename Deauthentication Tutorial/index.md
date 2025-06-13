@@ -46,7 +46,7 @@ In this tutorial, you’ll learn how to:
 
 ---
 
-## 🛰️ Step 1: Enable Monitor Mode
+## Step 1: Enable Monitor Mode
 
 First, identify your wireless interface:
 

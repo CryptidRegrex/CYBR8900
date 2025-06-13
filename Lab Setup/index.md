@@ -2,9 +2,9 @@
 title: Step 1 – Download Kali Linux ISO
 ---
 
-# 📥 Step 1 – Download Kali Linux ISO
+# Step 1 – Download Kali Linux ISO
 
-## 🔗 Official Download
+## Official Download
 
 Visit the official [Kali Linux Downloads page](https://www.kali.org/get-kali/) and choose:
 
@@ -24,7 +24,7 @@ title: Step 2 – Create Bootable USB
 
 - **Windows**: [Rufus](https://rufus.ie)
 
-### ✅ Rufus (Windows)
+### Rufus (Windows)
 
 1. Insert your USB drive (at least 8 GB).
 2. Open Rufus.
@@ -90,4 +90,4 @@ Choose from the menu:
 Remove the USB when installation finishes. Boot into Kali. 
 *You may need to go back into BIOS to choose the drive you installed Kali onto*
 
-[Next ➡️ Required Software](../Required Software/)
+[Next -> Required Software](../Required Software/)
