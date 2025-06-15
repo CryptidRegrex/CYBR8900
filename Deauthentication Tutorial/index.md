@@ -133,11 +133,11 @@ aireplay-ng -0 100 -a <BSSID> wlan0mon -c <CLIENT> wlan0mon
 
 **Before starting the attack**
 
-![Image](images/9.jpg)
+![Image](images/9-e.jpg)
 
 **After the attack**
 
-![Image](images/10.jpg)
+![Image](images/10-e.jpg)
 
 ## Step 5: Bash Script to Automate Discovery
 
