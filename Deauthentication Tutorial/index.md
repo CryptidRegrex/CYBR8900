@@ -133,11 +133,11 @@ aireplay-ng -0 100 -a <BSSID> wlan0mon -c <CLIENT> wlan0mon
 
 **Before starting the attack**
 
-![Image](images/9.png)
+![Image](images/9.jpg)
 
 **After the attack**
 
-![Image](images/10.png)
+![Image](images/10.jpg)
 
 ## Step 5: Bash Script to Automate Discovery
 
@@ -172,3 +172,7 @@ grep "$BSSID" scan_output-01.csv | awk -F ',' '{print $1}' | grep -E "([0-9A-Fa-
 echo "[****] Done."
 
 ```
+
+
+## Final Thoughts
+This lab is a good way to get started in understanding how Deauthentication attacks work, why they are powerful, and the tools required. 
