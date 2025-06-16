@@ -39,8 +39,6 @@ Example:
 
 
 ---
-title: Step 3 – BIOS/UEFI Configuration
----
 
 # Step 3 – Configure BIOS/UEFI
 
