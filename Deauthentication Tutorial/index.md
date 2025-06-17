@@ -264,6 +264,6 @@ This document is not legal advice. If you're unsure about what you're allowed to
 - [NIST Ethical Hacking Guidelines](https://csrc.nist.gov/publications/detail/sp/800-115/final)
 
 
-© [CryptidRegre], [2025]. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+© [CryptidRegrex], [2025]. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
