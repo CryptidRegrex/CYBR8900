@@ -4,6 +4,7 @@
 > This tutorial is provided strictly for **educational purposes** and **authorized penetration testing**.  
 > Do **not** use these tools on networks you do not own or have explicit permission to test.  
 > Unauthorized use is **illegal** and may result in criminal prosecution.
+> Please refence [Consequences](#final-thoughts) for details regarding misuse.
 
 ---
 
