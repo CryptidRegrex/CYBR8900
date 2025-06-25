@@ -13,7 +13,7 @@
 - [Prerequisites](#prerequisites)
 - [Step 1: Enable Monitor Mode](#step-1-enable-monitor-mode)
 - [Step 2: Discover the Target Access Point](#step-2-discover-the-target-access-point)
-- [Step 25-attempting-an-attack](#step-25-attempting-an-attack)
+- [Step 2.5-attempting-an-attack](#step-25-attempting-an-attack)
 - [Step 3: Isolate Clients Connected to the AP](#step-3-isolate-clients-connected-to-the-ap)
 - [Step 4: Preforming the Deauthentication Attack](#step-4-preforming-the-deauthentication-attack)
 - [Step 5: Bash Script to Automate Discovery](#step-5-bash-script-to-automate-discovery)
