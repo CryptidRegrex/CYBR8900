@@ -2,6 +2,7 @@
 
 This site contains a number of links to various labs I've completed. Each lab is a self-instructed tutorial that anyone can follow along. Each will provide informaiton about the requirements, steps on how to complete an object, and visuals.
 
+[Legal and Ethical Consequences](./Legal/)
 
 ## Labs
 
