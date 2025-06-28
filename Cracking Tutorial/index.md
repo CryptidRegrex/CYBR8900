@@ -103,7 +103,7 @@ sudo airodump-ng --bssid <BSSID> --channel <CH> -w <filename> <monitor-interface
 
 Now using the skills from the 2nd Lab I highly recommend trying to use a deauthentication attack against your device connected to the test AP. Why do this? Most devices have a autoreconnect feature so if we for a client connected to the AP off the network then it will attempt to connected again, therefore creating a new handshake event for us to catpure. 
 
-## Step 5: Caputre WPA Handshake
+## Step 5: Capture WPA Handshake
 
 To capture a handshake you need a client to make the initial handshake to acquire access to the AP. While the packet capture from step 3 is running go ahead and disconnect and reconnect a device to the AP. Once the client has acess again go ahead and end the capture from step 3. 
 
