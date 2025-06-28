@@ -107,7 +107,7 @@ Now using the skills from the 2nd Lab I highly recommend trying to use a deauthe
 
 To capture a handshake you need a client to make the initial handshake to acquire access to the AP. While the packet capture from step 3 is running go ahead and disconnect and reconnect a device to the AP. Once the client has acess again go ahead and end the capture from step 3. 
 
-[Image](images/3-2.png)
+![Image](images/3-2.png)
 
 
 ## Step 6: Open the Captured Packets in Wireshark
@@ -118,12 +118,12 @@ Now to see if the capture pulled the handshake informaiton. Using Wireshark you 
 wireshark <filename>.cap
 ```
 
-[Image](images/4-1.png)
+![Image](images/4-1.png)
 
 
 With Wireshark open search for **eapol**, this is short for Extensible Authentication Protocol over LAN used by the IEE 802.1X standard. Essentially it helps us sort out everything that isn't a handshake related packet.
 
-[Image](images/4-2.png)
+![Image](images/4-2.png)
 
 ## Step 7: Cracking the Password
 
@@ -133,7 +133,7 @@ This is were we can root out the password using some brute force. Leveraging the
 sudo aircrack-ng <capture-file>.cap -w <path-to-wordlist>
 ```
 
-[Image](images/5.png)
+![Image](images/5.png)
 
 
 ## Final Thoughts
