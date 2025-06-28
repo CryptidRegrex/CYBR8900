@@ -29,7 +29,7 @@ In this tutorial, you’ll learn how to:
 - Enable monitor mode on a wireless adapter
 - Use `airodump-ng` to find nearby Access Points and connected devices
 - Capture information and use Wireshark to complete an analysis on the data
-- ......
+- Crack a password using the handshake captured
 
 ---
 
