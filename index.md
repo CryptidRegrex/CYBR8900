@@ -13,7 +13,11 @@ This site contains a number of links to various labs I've completed. Each lab is
 
 ---
 
-Explore each topic using the sidebar or links above. You can always return to this homepage via the nav or by bookmarking it.
+## Extras
+
+- [Fake AP](./Fake Access Point/)
+
+---
 
 © [CryptidRegrex], [2025]. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
