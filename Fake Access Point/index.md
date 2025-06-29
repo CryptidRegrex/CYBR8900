@@ -165,7 +165,7 @@ This helps monitor which IPs have been assigned and which clients are active on 
 Limits dnsmasq to only listen on the **loopback interface** (`127.0.0.1`).  
 This helps contain the rogue DHCP/DNS service locally and prevents it from affecting other interfaces.
 
-My Config File
+**My Config File**
 
 
 ![Images](images/configDNS.png)
