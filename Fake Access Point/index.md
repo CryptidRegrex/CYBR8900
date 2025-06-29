@@ -8,8 +8,6 @@
 
 ## Prerequisites
 
-Before getting started with this fake access point setup, ensure you're running the latest version of **Kali Linux**. 
-
 - A computer running **Kali Linux**
 - A **wireless adapter that supports monitor mode and packet injection**
   - In this lab I leverage the **HAK5 MK7AC WiFi Adapter**
@@ -51,7 +49,6 @@ The Aircrack-ng suite supports a wide range of wireless testing operations, incl
 - Setting up fake access points
 - Testing driver and adapter capabilities
 
-We’ll be using several of these tools throughout the walkthrough. 
 
 ---
 
@@ -169,6 +166,8 @@ Limits dnsmasq to only listen on the **loopback interface** (`127.0.0.1`).
 This helps contain the rogue DHCP/DNS service locally and prevents it from affecting other interfaces.
 
 My Config File
+
+
 ![Images](images/configDNS.png)
 
 
@@ -189,6 +188,7 @@ Create an Access Point using the `airbase-ng`
 ```bash
 sudo airbase-ng -e "TestAP" -c 11 wlan0mon
 ```
+
 
 ![Images](images/airbase.png)
 
@@ -235,6 +235,7 @@ You should see output showing active DHCP leases and DNS requests
 ## Step 8: Connect to the Fake Access Point
 
 Now you should be able connect to your fake AP and see it within the output of your dnsmasq log!
+
 
 ![Images](images/Connecting.png)
 
