@@ -30,11 +30,8 @@ One of the most powerful Wi-Fi auditing tools available is **Aircrack-ng**. This
 Here are just a few components from the Aircrack-ng suite:
 
 - `airmon-ng`: Enables monitor mode on your wireless adapter
-- `airodump-ng`: Captures wireless traffic and displays network info
-- `aireplay-ng`: Performs deauthentication and replay attacks
-- `aircrack-ng`: Cracks WEP and WPA/WPA2-PSK keys using captured handshakes
 - `airbase-ng`: Creates rogue access points
-- `airdecap-ng`, `airdecloak-ng`, `airdrop-ng`: Various tools for processing and analyzing wireless traffic
+
 
 ---
 
@@ -62,37 +59,26 @@ Kali Linux comes with **Aircrack-ng**, the wireless penetration testing suite, p
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-## Step 2: Install dnsmasq
+---
 
-Installing a DNS forwarder and DHCP server that we'll use in creating the access point.
+## Step 2: Enable Monitor Mode on Wireless Interface
 
-```bash
-sudo apt-get install dnsmasq
-```
-
-Find the default configuration or create a config file.
+The first step is to enable **monitor mode** on your wireless interface (usually `wlan0`). This allows your system to capture and inject wireless traffic.
 
 ```bash
-/etc/dnsmasq.conf
+sudo airmon-ng start wlan0
 ```
 
-Leverage your favorite text editor like `nano` or `leafpad` to edit the config file.
+![Images](images/1.png)
 
-```bash
-sudo nano /etc/dnsmasq.conf
-```
+---
 
 ## Step 3: Directory for AP Setup
 
 Make a directory to store this information, and then create a new dnsmasq.conf file
 
-```bash
-mkdir eviltwin
-cd eviltwin
-nano dnsmasq.conf
-```
 
-Now to setup the configuration within the file
+Now to setup the configuration within the file for the dnsmasq Docker file. I've called min dnsmasq.conf.
 
 ```bash
 interface=at0
@@ -170,27 +156,36 @@ This helps contain the rogue DHCP/DNS service locally and prevents it from affec
 
 ![Images](images/configDNS.png)
 
+---
 
-## Step 4: Enable Monitor Mode on Wireless Interface
+## Step 4: Create Dockerfile
 
-The first step is to enable **monitor mode** on your wireless interface (usually `wlan0`). This allows your system to capture and inject wireless traffic.
-
-Run the following command:
+Creating the dockerfile to kick off the dnsmasq server. This allows us to spawn multiple configurations with different dnsmasq.conf files if needed.
 
 ```bash
-sudo airmon-ng start wlan0
+# Run dnsmasq on container start
+FROM debian:bullseye
+
+RUN apt-get update && \
+    apt-get install -y dnsmasq && \
+    apt-get clean
+
+# Run dnsmasq on container start
+COPY dnsmasq.conf /etc/dnsmasq.conf
+
+# Run dnsmasq on container start
+CMD ["dnsmasq", "-d"]
 ```
 
 ## Step 5: Creating the Access Point
 
-Create an Access Point using the `airbase-ng`
+Create an Access Point using the `airbase-ng`. This will start broadcasting on the 2.4GHz band and should be accessable to devices. However, this doesn't have the capacity to assign an IP to the client yet.
 
 ```bash
 sudo airbase-ng -e "FreeWifi" -c 6 wlan0mon
 ```
 
-
-![Images](images/airbase.png)
+![Images](images/2.png)
 
 ---
 
@@ -198,69 +193,78 @@ sudo airbase-ng -e "FreeWifi" -c 6 wlan0mon
 
 Create dnsmasq.conf
 
-Save this as dnsmasq-ap1.conf:
-
-- interface=at0
-- dhcp-range=10.0.0.10,10.0.0.100,12h
-- dhcp-option=3,10.0.0.1
-- dhcp-option=6,10.0.0.1
-- log-queries
-- log-dhcp
-- bind-interfaces
-
->interface=at0: DNS/DHCP binds to virtual AP
->dhcp-range: IPs to assign to clients
->option 3: gateway
->option 6: DNS server
-
-## Step 6: Configure the `at0` Interface
+Save this as whatever you like in my case dnsmasq-ap1.conf (if I'm creating multiple APs):
 
 ```bash
-sudo ifconfig at0 up
-sudo ifconfig at0 10.0.0.1 netmask 255.255.255.0
-sudo route add -net 10.0.0.0 netmask 255.255.255.0 gw 10.0.0.1
-sudo iptables -P FORWARD ACCEPT
-sudo iptables -t nat -A POSTROUTING -o wlan0mon -j MASQUERADE
+interface=at0
+dhcp-range=10.0.0.10,10.0.0.100,12h
+dhcp-option=3,10.0.0.1
+dhcp-option=6,10.0.0.1
+log-queries
+log-dhcp
+bind-interfaces
+```
+
+- interface=at0: DNS/DHCP binds to virtual AP
+- dhcp-range: IPs to assign to clients
+- option 3: gateway
+- option 6: DNS server
+
+---
+
+## Step 6: Configure the Virtual Interfaces
+
+- airbase-ng creates a virtual interface at0 that acts like a network card for your fake AP.
+
+```bash
+sudo ifconfig at0 10.0.0.1 netmask 255.255.255.0 up
+```
+- Sets the IP address and brings up the interface
+
+```bash
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
+- Enables NAT for internet forwarding (assuming eth0 is your real internet interface)
+
+```bash
 echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
 ```
 
-**What does this do?**
+**What this Looks Like:**
 
-- ifconfig at0 up: Activates the virtual interface.
-
-- ifconfig at0 10.0.0.1 ...: Assigns the interface an IP address and subnet.
-
-- route add ...: Adds a static route to forward client traffic.
-
-- iptables -P FORWARD ACCEPT: Allows packet forwarding.
-
-- iptables ... MASQUERADE: Enables NAT so clients can access external networks.
-
-- echo 1 > /proc/sys/net/ipv4/ip_forward: Enables system-level IP forwarding.
-
-What this Looks Like:
-
-![Images](images/IPForwarding.png)
-
-
-## Step 7: Start dnsmasq
-
-We'll start the DHCP/DNS service using the dnsmasq via the config file created earlier.
-
-```bash
-sudo dnsmasq -C ~/Desktop/eviltwin/dnsmasq.conf -d
-```
-
-You should see output showing active DHCP leases and DNS requests
-
-## Step 8: Connect to the Fake Access Point
-
-Now you should be able connect to your fake AP and see it within the output of your dnsmasq log!
-
-
-![Images](images/Connecting.png)
+![Images](images/3.png)
 
 ---
+
+## Step 7: Build the Docker Image
+
+Build the docker image so we can spawn a run from it's container. 
+
+```bash
+docker build -t fake-dns-image -f Dockerfile.dnsmasq .
+```
+
+![Images](images/4.png)
+
+---
+
+
+## Step 8: Run the Docker Container
+
+Run the docker container with the correct dnsmasq*.conf files you need to spawn multiple APs
+
+![Images](images/5.png)
+
+---
+
+## Finished!
+
+You now have a Fake AP that can assign IPs to clients. Now you can connnect a device to test with and run attacks against the AP like you would an real access point!
+
+**Example**
+
+![Images](images/6.png)
+
 
 © [CryptidRegrex], [2025]. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
