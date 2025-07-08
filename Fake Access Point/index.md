@@ -186,11 +186,32 @@ sudo airmon-ng start wlan0
 Create an Access Point using the `airbase-ng`
 
 ```bash
-sudo airbase-ng -e "TestAP" -c 11 wlan0mon
+sudo airbase-ng -e "FreeWifi" -c 6 wlan0mon
 ```
 
 
 ![Images](images/airbase.png)
+
+---
+
+## Step 6: Configure the `at0` Interface
+
+Create dnsmasq.conf
+
+Save this as dnsmasq-ap1.conf:
+
+- interface=at0
+- dhcp-range=10.0.0.10,10.0.0.100,12h
+- dhcp-option=3,10.0.0.1
+- dhcp-option=6,10.0.0.1
+- log-queries
+- log-dhcp
+- bind-interfaces
+
+>interface=at0: DNS/DHCP binds to virtual AP
+>dhcp-range: IPs to assign to clients
+>option 3: gateway
+>option 6: DNS server
 
 ## Step 6: Configure the `at0` Interface
 
