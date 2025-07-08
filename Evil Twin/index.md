@@ -24,6 +24,21 @@
 
 ---
 
+## Prerequisites
+
+- A computer running **Kali Linux**
+- A **wireless adapter that supports monitor mode and packet injection**
+  - In this lab I leverage the **HAK5 MK7AC WiFi Adapter**
+- An access point that can use the WPA2-Personal protocol **AND** is using the 2.4GHz transmission frequency [**DON'T HAVE AN AP? CREATE ONE HERE!!**](../Fake Access Point/)
+  - In this lab I leverage the **NETGEAR R6400-100NAS** *Circa 2017*
+*Note this lab hinges on these two commponents. I would recommend using an older router*
+- Tools that already should be included in Kali:
+  - `airmon-ng`
+  - `airodump-ng`
+  - `aireplay-ng`
+- Superuser (`sudo`) privileges
+
+
 ## Step 1: Install Airgeddon
 
 Start by installing Airgeddon using your package manager. On Kali Linux or Debian-based systems:
@@ -86,7 +101,7 @@ This locks in the target network for the Evil Twin attack.
 
 ![Images](images/2-4-1.png)
 
-This is the selected access point
+**This is the selected access point**
 
 ![Images](images/2-5.png)
 
@@ -131,11 +146,11 @@ Device is connected to the Lap_AP
 ![Images](images/ReadAP - edited.jpg)
 
 
-Configuring the settings for the attack 
+**Configuring the settings for the attack**
 
 ![Images](images/3-3.png)
 
-Capturing the handshake
+**Capturing the handshake**
 
 ![Images](images/3-4.png)
 
@@ -153,11 +168,11 @@ Options include:
 
 You can also choose the language of the portal to match your target's locale.
 
-Setting up the portal language
+**Setting up the portal language**
 
 ![Images](images/4-1.png)
 
-Option to update the portal template
+**Option to update the portal template**
 
 ![Images](images/4-2.png)
 

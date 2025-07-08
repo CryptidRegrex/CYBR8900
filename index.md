@@ -9,7 +9,7 @@ This site contains a number of links to various labs I've completed. Each lab is
 - [Lab 1 – Getting Started](./Lab Setup/)
 - [Lab 2 – Deauthentication attacks](./Deauthentication Tutorial/)
 - [Lab 3 – Password cracking](./Cracking Tutorial/)
-- [Lab 4 – Evil Twin Attack](./lesson 4/)
+- [Lab 4 – Evil Twin Attack](./Evil Twin/)
 
 ---
 
