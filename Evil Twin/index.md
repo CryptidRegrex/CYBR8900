@@ -17,7 +17,7 @@
 - [Step 5: Scan for Target Access Point](#step-5-scan-for-target-access-point)
 - [Step 6: Launch Deauthentication Attack via mdk4](#step-6-launch-deauthentication-attack-via-mdk4)
 - [Step 7: Disable DoS Pursuit Mode (Optional)](#step-7-disable-dos-pursuit-mode-optional)
-- [Step 8: Capture WPA/WPA2 Handshake (Optional but Recommended)](#step-8-capture-wpawpa2-handshake-optional-but-recommended)
+- [Step 8: Capture WPA/WPA2 Handshake (Optional)](#step-8-capture-wpawpa2-handshake-optional)
 - [Step 9: Configure the Captive Portal Template](#step-9-configure-the-captive-portal-template)
 - [Step 10: Start the Evil Twin Attack](#step-10-start-the-evil-twin-attack)
 - [Final Thoughts](#final-thoughts)
