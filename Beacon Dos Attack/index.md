@@ -123,6 +123,7 @@ As you can see here's a few snapshots of my device's list of available networks.
 
 ![Image](images/9.jpg)
 
+---
 
 ## Final Thoughts
 
