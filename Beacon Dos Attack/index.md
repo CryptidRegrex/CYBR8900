@@ -27,7 +27,7 @@ In this tutorial, you’ll learn how to:
 - Enable monitor mode on a wireless adapter
 - Use `airgeddon` to find nearby Access Points and connected devices
 - Choose your desired access point target
-- Flood the network with mirrored access points
+- Flood the network with beacon frames
 
 ## Beacon DoS Attack
 1. Fake Beacon Frames: The attacker floods a wireless network with a large number of fake beacon frames. Beacon frames are used to announce that a network is available. 
