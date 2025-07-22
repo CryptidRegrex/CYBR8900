@@ -111,15 +111,15 @@ Finally, a new window will spawn and you should see the BSSID and SSID with a nu
 As you can see here's a few snapshots of my device's list of available networks. I was able to see 4 of these networks up at one point and I have a screenshot of three of the four. Connecting to one of them allowed me to obtain an IP address and connect to the network. The others would fail to connect any time I choose the incorrect one. 
 
 
-Generated Beacon Frame
+**Generated Beacon Frame**
 
 ![Image](images/7.jpg)
 
-Real Network
+**Real Network**
 
 ![Image](images/8.jpg)
 
-Generated Beacon Frame
+**Generated Beacon Frame**
 
 ![Image](images/9.jpg)
 
