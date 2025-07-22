@@ -1,4 +1,4 @@
-# Wi-Fi Cracking: Monitor Mode
+# Beacon DoS Attack
 
 > **Disclaimer:**  
 > This tutorial is provided strictly for **educational purposes** and **authorized penetration testing**.  
