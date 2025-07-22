@@ -10,7 +10,7 @@ This site contains a number of links to various labs I've completed. Each lab is
 - [Lab 2 – Deauthentication attacks](./Deauthentication Tutorial/)
 - [Lab 3 – Password cracking](./Cracking Tutorial/)
 - [Lab 4 – Evil Twin Attack](./Evil Twin/)
-- [Lab 5 - Beacon DoS Attack](./Beacon%20Dos%20Attack/)
+- [Lab 5 – Beacon DoS Attack](./Beacon%20Dos%20Attack/)
 
 ---
 
