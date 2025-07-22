@@ -72,6 +72,8 @@ sudo airmon-ng start wlan0
 
 ![Image](images/1-2.png)
 
+---
+
 ## Step 2: Discover the Target Access Point
 
 Now that we have a wireless adapter that is in monitor mode it's time to determint the BSSID and Channel of the access point we are going to attack. Using the **wland0mon** interface we can begin to seach for these access points. Please be aware this only works on the 2.4GHz signal
@@ -86,6 +88,8 @@ After some time elaspse my router was able to be located aptly called **Lab_AP**
 
 ![Image](images/2-2.png)
 
+---
+
 ## Step 3: Target a Desired Access Point
 
 Once you find the BSSID and Channel you begin to monitor a specific device which is critical to crack the key. The command is similar to the one used in the deatuthentication tutorial except this time we'll be writing the output of the packet capture to a file the `-w <filename>`. This is important for not only validating we captured the handshake, but also so we can crack it. Keep this command running until you've captured a handshake.
@@ -96,6 +100,7 @@ sudo airodump-ng --bssid <BSSID> --channel <CH> -w <filename> <monitor-interface
 
 ![Image](images/3-1.png)
 
+---
 
 ## Step 4: Capture WPA handshake via Deauthentication Attack (Optional)
 
@@ -103,12 +108,15 @@ sudo airodump-ng --bssid <BSSID> --channel <CH> -w <filename> <monitor-interface
 
 Now using the skills from the 2nd Lab I highly recommend trying to use a deauthentication attack against your device connected to the test AP. Why do this? Most devices have a autoreconnect feature so if we for a client connected to the AP off the network then it will attempt to connected again, therefore creating a new handshake event for us to catpure. 
 
+---
+
 ## Step 5: Capture WPA Handshake
 
 To capture a handshake you need a client to make the initial handshake to acquire access to the AP. While the packet capture from step 3 is running go ahead and disconnect and reconnect a device to the AP. Once the client has acess again go ahead and end the capture from step 3. 
 
 ![Image](images/3-2.png)
 
+---
 
 ## Step 6: Open the Captured Packets in Wireshark
 
@@ -125,6 +133,8 @@ With Wireshark open search for **eapol**, this is short for Extensible Authentic
 
 ![Image](images/4-2.png)
 
+---
+
 ## Step 7: Cracking the Password
 
 This is were we can root out the password using some brute force. Leveraging the `aircrack-ng` tool we can use the packets we've caputred containg the handshake packets as well as a password list to try and find the password. You can leverage [this](https://github.com/josuamarcelc/common-password-list) repo's password list rockyou.txt or, since you know the password, create a txt file with the plain text password on a new line. 
@@ -135,6 +145,7 @@ sudo aircrack-ng <capture-file>.cap -w <path-to-wordlist>
 
 ![Image](images/5.png)
 
+---
 
 ## Final Thoughts
 
