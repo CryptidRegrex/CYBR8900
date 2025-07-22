@@ -76,8 +76,6 @@ Airgeddon comes with a few options to attack wireless networks. This includes so
 
 ![Image](images/2.png)
 
-After some time elaspse my router was able to be located aptly called **Lab_AP**. Noting the BSSID **A0:04:60:3A:1F:E5** and the channel, thrid column to the right **9** I have what I need to begin an attack.
-
 ---
 
 ## Step 3: Target a Desired Access Point
