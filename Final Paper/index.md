@@ -1,8 +1,8 @@
 # Why Insecure Wi-Fi Should Worry You
 
-[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://www.canva.com/design/DAGuHjgOwqU/I674tj7WHRQLWTc0weLvRQ/watch?utm_content=DAGuHjgOwqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf9f18905c8)
+[![Watch the video](images/thumbnail.png)](https://www.canva.com/design/DAGuHjgOwqU/I674tj7WHRQLWTc0weLvRQ/watch?utm_content=DAGuHjgOwqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf9f18905c8)
 
- 
+
 92% of the networks I scanned today are still using outdated security protocols on their wireless devices in the Nebraska area.  Security protocols to most people are not something they spend time worrying about. After all, if your internet works and you have a password on your Wi-Fi, everything is protected, at least that’s what most think. 
 
 These older protocols, like WEP, WPA, and WPA2, have known weaknesses that have been publicly disclosed for years. One of the most notorious vulnerabilities is known as KRACK, short for Key Reinstallation Attack. It can be used to compromise your connection, disrupt your access, hijack your session, or in some cases, steal sensitive credentials. These are not obscure technical threats, but actionable attacks a bad actor can use in practice. The vulnerabilities are real and anyone with the right knowledge and tools, most of them free, can take advantage of them.
@@ -78,9 +78,13 @@ Writing to your local representatives is the first place to start. Ask for the c
  
 ## References
 Federal Trade Commission. (2022, December). How to secure your home Wi-Fi Network. Consumer Advice. https://consumer.ftc.gov/articles/how-secure-your-home-wi-fi-network 
+
 Froehlich, A. (2020, March 11). Can WPA2 be upgraded to WPA3?: TechTarget. Search Networking. https://www.techtarget.com/searchnetworking/answer/Can-WPA2-be-upgraded-to-WPA3 
+
 IBM. (2024). Cost of a data breach 2024. Cost of a Data Breach Report 2024 . https://www.ibm.com/reports/data-breach 
+
 Lampariello, D. (2025, January 29). Data breaches continued to surge in 2024, New Report shows. WGME. https://wgme.com/news/i-team/data-breaches-continued-to-surge-in-2024-new-report-shows 
+
 Parks Associates. (2024, April 22). Vast majority (80%) of US households have a home network router; 28% report intentions to purchase. https://www.parksassociates.com/blogs/ce-pr/vast-majority-80-of-us-households-have-a-home-network-router-28-report-intentions-to-purchase 
 
 
