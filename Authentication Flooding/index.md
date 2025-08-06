@@ -14,8 +14,8 @@
 - [Prerequisites](#prerequisites)
 - [Step 1: Enable Monitor Mode](#step-1-enable-monitor-mode)
 - [Step 2: Target a Desired Access Point](#step-2-target-a-desired-access-point)
-- [Step 3: Using mdk4 to Launch Attack](#step-3-setup-beacon-dos-attack)
-- [Step 4: Automate It Using Python](#step-4-monitor-the-results)
+- [Step 3: Using mdk4 to Launch Attack](#step-3-using-mdk4-to-launch-attack)
+- [Step 4: Automate It Using Python](#step-4-automate-it-using-python)
 - [Final Thoughts](#final-thoughts)
 
 ---
