@@ -76,7 +76,7 @@ sudo airmon-ng start wlan0
 
 ## Step 2: Discover the Target Access Point
 
-Now that we have a wireless adapter that is in monitor mode it's time to determint the BSSID and Channel of the access point we are going to attack. Using the **wland0mon** interface we can begin to seach for these access points. Please be aware this only works on the 2.4GHz signal
+Now that we have a wireless adapter that is in monitor mode it's time to determine the BSSID and Channel of the access point we are going to attack. Using the **wland0mon** interface we can begin to seach for these access points. Please be aware this only works on the 2.4GHz signal.
 
 ```bash
 sudo airodump-ng wlan0mon
