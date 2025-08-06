@@ -1,5 +1,7 @@
 # Why Insecure Wi-Fi Should Worry You
 
+**Watch the Video by clicking on the image below**
+
 [![Watch the video](images/thumbnail.png)](https://www.canva.com/design/DAGuHjgOwqU/I674tj7WHRQLWTc0weLvRQ/watch?utm_content=DAGuHjgOwqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf9f18905c8)
 
 
