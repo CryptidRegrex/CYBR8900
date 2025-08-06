@@ -11,13 +11,18 @@ This site contains a number of links to various labs I've completed. Each lab is
 - [Lab 3 – Password cracking](./Cracking Tutorial/)
 - [Lab 4 – Evil Twin Attack](./Evil Twin/)
 - [Lab 5 – Beacon DoS Attack](./Beacon%20Dos%20Attack/)
-- [Lab 6 – Authentication Flooding](./Authentication Flooding)
+- [Lab 6 – Authentication Flooding](./Authentication Flooding/)
 
 ---
 
 ## Extras
 
 - [Fake AP](./Fake Access Point/)
+
+
+## Final Paper
+
+- [Paper & Presentation](./Final Paper/)
 
 ---
 
