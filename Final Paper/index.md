@@ -71,14 +71,17 @@ To summarize, a way to report, investigate, and inform users via a similar model
 To clearly illustrate the immediate risk to consumers, I performed practical tests. I used a WPA2 access point and was able to disconnect a device using what’s called a deauthentication attack (see Figure 1). Once the device tried to reconnect, I captured the handshake which is the digital version of a device proving it knows the password. Using that data, I was able to brute-force the password and access the network (see Figure 2).
 
 ![Image](images/BruteANDDeauthFig.png)
+
 **Figure 1. Deauthentication Attack**
 
 ![Image](images/BruteFig.png)
+
 **Figure 2. Capture Authenticaiton Packets**
 
 In a separate test, I created an “evil twin” which is a fake version of the same wireless network. When I disconnected the original device, it attempted to reconnect to mine instead. Once that happened, I could see all the traffic it sent and received. Everything it did passed through my fake access point (see Figure 3). These attacks didn’t require expensive tools or obscure knowledge. They were performed using publicly available software and equipment that anyone can download and use.
 
 ![Image](images/EvilTwinFig.png)
+
 **Figure 3. Evil Twin Attack**
 
 WPA 3 exists to prevent these attacks through Protected Management Frames. But for anyone still using WPA2, they are fully exposed. With nearly 92% of networks in my scan still running WPA2 or worse, there is no question about it, these devices need to be addressed. These tests underscore the ease of exploiting common Wi-Fi vulnerabilities without sophisticated tools.
