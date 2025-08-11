@@ -2,7 +2,7 @@
 
 **Watch the Video by clicking on the image below**
 
-[![Watch the video](images/BruteFig.png)](https://www.canva.com/design/DAGuHjgOwqU/I674tj7WHRQLWTc0weLvRQ/watch?utm_content=DAGuHjgOwqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf9f18905c8)
+[![Watch the video](images/thumbnail.png)](https://www.canva.com/design/DAGuHjgOwqU/I674tj7WHRQLWTc0weLvRQ/watch?utm_content=DAGuHjgOwqU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf9f18905c8)
 
 
 The wireless networks we take advantage of each day are seemingly innocuous, but few are aware of the potential threats associated with this technology. These vulnerabilities can threaten your data, privacy, and safety online and you need to protect yourself. In this paper I discuss the current state, existing threats, discuss and evaluate models for consumer protection, and provide some proposals for better wireless protection. 
